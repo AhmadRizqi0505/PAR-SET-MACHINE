@@ -1,0 +1,214 @@
+/* Footer styling */
+.main-footer {
+    background: #1976d2;
+    color: #fff;
+    text-align: center;
+    padding: 16px 0;
+    width: 100%;
+    font-size: 15px;
+    letter-spacing: 0.5px;
+    position: relative;
+    bottom: 0;
+    left: 0;
+    margin-top: 40px;
+    z-index: 10;
+    font-weight: 500;
+}
+
+
+/* Header-section: menu, h1, p dengan background biru */
+
+.header-section {
+    background: #155FE8;
+    padding-bottom: 24px;
+    position: relative;
+}
+
+.header-section h1,
+.header-section p {
+    color: #fff;
+    background: transparent;
+}
+
+
+/* Header container biru */
+
+.header-container {
+    background: #155FE8;
+    padding-bottom: 32px;
+    position: relative;
+}
+
+/* Logo di header, tidak absolute */
+.logo-img {
+    position: static;
+    width: 150px;
+    height: auto;
+    margin: 32px 0 0 10px;
+    z-index: 10;
+    display: block;
+    margin-top: 32px;
+}
+
+/* Sub-header putih, lebar sesuai menu */
+.sub-header {
+    background: #155FE8;
+    margin: 0 auto;
+    border-radius: 0 0 12px 12px;
+    max-width: 760px;
+    text-align: center;
+    padding: 24px 0 16px 0;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+    position: relative;
+    z-index: 2;
+}
+
+.sub-header h1 {
+    color: #155FE8;
+    margin-bottom: 8px;
+}
+
+.sub-header p {
+    color: #222;
+    margin: 0;
+    background-color: #155FE8;
+}
+
+ body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #333;
+            padding: 10px 20px;
+        }
+
+        .navbar ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+        }
+
+        .navbar li {
+            margin: 0 15px;
+        }
+
+        .navbar a {
+            color: white;
+            text-decoration: none;
+            font-size: 16px;
+        }
+
+/* Untuk menu di .topnav */
+        .topnav {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #155FE8;
+            padding: 18px 0 10px 0;
+            gap: 18px;
+        }
+
+        .topnav a {
+            font-size: 20px;
+            padding: 6px 18px;
+            letter-spacing: 0.5px;
+            display: inline-block;
+            color: #222;
+            text-decoration: none;
+            border-radius: 4px;
+            transition: background 0.2s;
+        }
+
+
+        /* Menu utama berwarna putih */
+
+        .topnav a {
+            background-color: #155FE8;
+            color: #fff;
+        }
+
+
+        /* Judul berwarna biru */
+
+        h1 {
+            color: #fff;
+            background-color: #155FE8;
+        }
+
+        .topnav a:hover {
+            background: #333;
+        }
+
+        .navbar a:hover {
+            text-decoration: underline;
+        }
+
+        .logo img {
+            height: 50px;
+        }
+
+
+/* Dropdown styles for .topnav */
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #fff;
+    min-width: 180px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.1);
+    z-index: 20;
+    left: 0;
+    top: 100%;
+    border-radius: 4px;
+    padding: 8px 0;
+}
+
+.dropdown-content.show {
+    display: block;
+}
+
+.dropdown-content a {
+    color: #222;
+    background-color: #fff;
+    padding: 10px 18px;
+    text-decoration: none;
+    display: block;
+    font-size: 18px;
+    border-radius: 0;
+}
+
+.dropdown-content a:hover {
+    background-color: #f0f0f0;
+}
+
+html,
+body {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    padding: 0;
+    max-width: 150%;
+    overflow-x: hidden;
+}
+
+main {
+    flex: 1;
+}
+
+.main-footer {
+    margin-top: auto;
+}
+
