@@ -2,7 +2,7 @@ body .card-container {
     display: flex;
     justify-content: center;
     align-items: center;
-    min-height: auto;
+    min-height: 80%;
     background-color: #f0f0f0;
     margin: 0;
     padding: 10px;
@@ -68,4 +68,5 @@ body .card-container {
 .btn:hover {
     background-color: #0056b3;
 }
+
 
