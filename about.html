@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About CPM</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="stylebodycard.css">
+  <link rel="icon" href="cpm4.png">
+
+</head>
+<body>
+<div class="header-section">
+  <div class="topnav" id="myTopnav">
+    <a href="index.html" class="active">Home</a>
+    <div class="dropdown">
+      <a href="#" id="ParameterSettingMcBtn" onclick="toggleSubMenu(event)">Parameter Setting MC &#9662;</a>
+      <div id="SettingSubMenu" class="dropdown-content">
+        <a href="mc30A.html">MC 30A</a>
+        <a href="mc30B.html">MC 30B</a>
+        <a href="mc30C.html">MC 30C</a>
+        <a href="mc40B.html">MC 40B</a>
+        <a href="mc40C.html">MC 40C</a>
+      </div>
+    </div>
+    <a href="contact.html">Contact</a>
+    <a href="about.html">About</a>
+    <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+      <i class="fa fa-bars"></i>
+    </a>
+  </div>
+  <div class="main-title">
+    <h1>ABOUT COMPANY</h1><br>
+    <p>Wellcome to Website PAR-SET PT Citra Plastik Makmur</p>
+  </div>
+</div>
+
+<div class="card-container">
+  <div class="card1">
+    <div class="card1-image">
+      <div class="card1-content">
+  <main>
+    <div>
+      <h2 style="color: blue; text-align: center; margin: 32px 0;"><b>ABOUT PT CITRA PLASTIK MAKMUR</b></h2><br>
+      <p style="text-align: justify;">PT Citra Plastik Makmur is a plastics manufacturing company, specifically producing plastic components for various industries. Founded in 2008, the company has grown rapidly and become a major supplier of parts to the Indonesian plastics market.<br><br>
+      The company has modern production facilities equipped with the latest technology to ensure high product quality. PT Citra Plastik Makmur is committed to providing innovative solutions to customers through high-quality products and superior service.<br><br>
+      With an experienced and dedicated team, PT Citra Plastik Makmur continuously strives to meet customer needs and contribute to the development of the plastics industry in Indonesia. The company also places a strong emphasis on environmental and sustainability aspects in its operations.<br><br>
+      For more information about our products and services, please visit the MC Parameter Setting page or contact us via the Contact page.</p>
+      </div> 
+  </main>
+  </div>
+  </div>
+  </div>
+</div>
+
+
+<footer class="main-footer">
+    <b>Created by Ahmad Rizqi Gustiansyah (IT DEPARTMENT)</b>
+</footer>
+
+  
+  <script>
+        function toggleSubMenu(event) {
+            event.preventDefault();
+            var submenu = document.getElementById('SettingSubMenu');
+            submenu.classList.toggle('show');
+            // Optional: close dropdown if click outside
+            document.addEventListener('click', function handler(e) {
+                if (!submenu.parentElement.contains(e.target)) {
+                    submenu.classList.remove('show');
+                    document.removeEventListener('click', handler);
+                }
+            });
+        }
+
+            function myFunction() {
+        var x = document.getElementById("myTopnav");
+        if (x.className === "topnav") {
+            x.className += " responsive";
+        } else {
+            x.className = "topnav";
+        }
+}
+  </script>
+
+</body>
+</html>

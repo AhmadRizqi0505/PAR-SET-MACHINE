@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="stylebodycard.css">
+    <link rel="icon" href="cpm4.png">
+
+</head>
+
+<body>
+    <div class="header-section">
+        <div class="topnav" id="myTopnav">
+            <a href="index.html" class="active">Home</a>
+            <div class="dropdown">
+                <a href="#" id="ParameterSettingMcBtn" onclick="toggleSubMenu(event)">Parameter Setting MC &#9662;</a>
+                <div id="SettingSubMenu" class="dropdown-content">
+                    <a href="mc30A.html">MC 30A</a>
+                    <a href="mc30B.html">MC 30B</a>
+                    <a href="mc30C.html">MC 30C</a>
+                    <a href="mc40B.html">MC 40B</a>
+                    <a href="mc40C.html">MC 40C</a>
+                </div>
+            </div>
+            <a href="contact.html">Contact</a>
+            <a href="about.html">About</a>
+            <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+                <i class="fa fa-bars"></i>
+            </a>
+        </div>
+        <div class="main-title">
+            <h1>Contact</h1><br>
+            <p>Wellcome to Website PAR-SET PT Citra Plastik Makmur</p>
+        </div>
+    </div>
+
+<div class="card-container">
+  <div class="card1">
+    <div class="card1-image">
+      <div class="card1-content">
+    <main>
+        <div style="text-align: center; margin-top: 20px;">
+            <h2>Contact Information</h2>
+            <p>If you have any questions or need further assistance, please feel free to reach out to us :</p><br>
+            <p><strong>Email: rizqi.gustiansyah28@gmail.com (IT DEPT)</strong>
+            <p><strong>Email: hantoaja01@gmail.com (SPV PROD)</strong>
+    </main>
+    </div>
+</div>  
+</div>
+</div>
+
+<footer class="main-footer">
+    <b>Created by Ahmad Rizqi Gustiansyah (IT DEPARTMENT)</b>
+</footer>
+
+    <script>
+            function toggleSubMenu(event) {
+            event.preventDefault();
+            var submenu = document.getElementById('SettingSubMenu');
+            submenu.classList.toggle('show');
+            // Optional: close dropdown if click outside
+            document.addEventListener('click', function handler(e) {
+                if (!submenu.parentElement.contains(e.target)) {
+                    submenu.classList.remove('show');
+                    document.removeEventListener('click', handler);
+                }
+            });
+        }
+
+            function myFunction() {
+        var x = document.getElementById("myTopnav");
+        if (x.className === "topnav") {
+            x.className += " responsive";
+        } else {
+            x.className = "topnav";
+        }
+}
+    </script>
+
+</body>
+</html>
