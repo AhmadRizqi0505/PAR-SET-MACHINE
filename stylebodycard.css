@@ -15,7 +15,7 @@ body .card-container {
     overflow: hidden;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Efek bayangan lembut di luar */
     background-color: white;
-    justify-content: left;
+    justify-content: center;
     transition: transform 0.3s ease, box-shadow 0.3s ease; /* Efek saat hover */
     margin: auto;
     max-width: auto; /* Lebar maksimum kartu */
@@ -68,3 +68,4 @@ body .card-container {
 .btn:hover {
     background-color: #0056b3;
 }
+
