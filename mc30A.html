@@ -4,16 +4,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Wellcome</title>
+    <title>PAR-SET M/C 30A</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="stylecard.css">
-
+   <link rel="stylesheet" href="stylecard.css">
+   <link rel="stylesheet" href="stylebodycard.css">
+   
 </head>
 
 <body>
-    <img src="cpm4.png" alt="PT Citra Plastik Makmur" style="position: absolute; top: 40px; left: 20px; width: 150px; height: auto; z-index: 10;">
+    
     <div class="header-section">
+        <img src="cpm4.png" alt="PT Citra Plastik Makmur" class="logo">
         <div class="topnav" id="myTopnav">
             <a href="index.html" class="active">Home</a>
             <div class="dropdown">
@@ -32,12 +34,16 @@
                 <i class="fa fa-bars"></i>
             </a>
         </div>
-        <div style="text-align:center;">
-            <h1>PARAMETER SETTING MACHINE 30A</h1>
+    
+        <div class="main-title">
+            <h1>PARAMETER SETTING MACHINE 30A</h1><br>
             <p>Wellcome to Website PAR-SET PT Citra Plastik Makmur</p>
         </div>
-    </div><br>
+    </div>
 
+<div class="card-container">
+    <div class="card1">
+        <div class="card1-content">
     <main>
         <div class="column">
             <div class="card">
@@ -73,26 +79,15 @@
                 </a>
             </div>
         </div>
-    </main>
-
+    </main><br><br>
+    </div>
+   </div>
+</div>
     <footer class="main-footer">
         <b>Created by Ahmad Rizqi Gustiansyah (IT DEPARTMENT)</b>
     </footer>
 
-    <script>
-        function toggleSubMenu(event) {
-            event.preventDefault();
-            var submenu = document.getElementById('SettingSubMenu');
-            submenu.classList.toggle('show');
-            // Optional: close dropdown if click outside
-            document.addEventListener('click', function handler(e) {
-                if (!submenu.parentElement.contains(e.target)) {
-                    submenu.classList.remove('show');
-                    document.removeEventListener('click', handler);
-                }
-            });
-        }
-    </script>
+    <script src="script.js"></script>
 
 </body>
 
