@@ -93,7 +93,7 @@ main {
 
 .dropdown-content {
     display: none;
-    position: absolute;
+    position: relative;
     background-color: #ffffff;   
     min-width: 200px;
     box-shadow: 0px 4px 12px rgba(0,0,0,0.15);
@@ -106,7 +106,7 @@ main {
 }
 
 .dropdown-content.show {
-    display: block;
+    display: ;
 }
 
 .dropdown-content a {
@@ -165,5 +165,6 @@ main {
     height: auto;
 }
  
+
 
 
