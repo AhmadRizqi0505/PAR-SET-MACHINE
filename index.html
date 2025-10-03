@@ -48,24 +48,31 @@
     </footer>
 
 <script>
-document.querySelectorAll(".dropdown-toggle").forEach(function(toggle){
-  toggle.addEventListener("click", function(e){
-    e.preventDefault(); 
-    let parent = this.parentElement;
-    parent.classList.toggle("open"); 
-  });
-});
+document.addEventListener("DOMContentLoaded", function() {
+  document.querySelectorAll(".dropdown-toggle").forEach(function(toggle){
+    toggle.addEventListener("click", function(e){
+      e.preventDefault(); 
 
-document.addEventListener("click", function(e){
-  if(!e.target.closest(".dropdown")){
-    document.querySelectorAll(".dropdown.open").forEach(function(openDrop){
-      openDrop.classList.remove("open");
+      let parent = this.parentElement;
+      document.querySelectorAll(".dropdown.open").forEach(function(openDrop){
+        if(openDrop !== parent){
+          openDrop.classList.remove("open");
+        }
+      });
+      parent.classList.toggle("open");
     });
-  }
+  });
+
+  document.addEventListener("click", function(e){
+    if(!e.target.closest(".dropdown")){
+      document.querySelectorAll(".dropdown.open").forEach(function(openDrop){
+        openDrop.classList.remove("open");
+      });
+    }
+  });
 });
 </script>
 
 </body>
-
-
 </html>
+
