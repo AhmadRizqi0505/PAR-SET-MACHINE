@@ -106,7 +106,7 @@ main {
 }
 
 .dropdown-content.show {
-    display: ;
+    display: block ;
 }
 
 .dropdown-content a {
@@ -165,6 +165,7 @@ main {
     height: auto;
 }
  
+
 
 
 
