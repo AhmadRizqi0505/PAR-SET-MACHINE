@@ -95,7 +95,7 @@ main {
     display: none;
     position: absolute;  
     background-color: #ffffff;   
-    min-width: 100px;
+    width: 100px;
     box-shadow: 0px 4px 12px rgba(0,0,0,0.15);
     z-index: 20;
     top: 100%;   /* muncul tepat di bawah menu utama */
@@ -165,6 +165,7 @@ main {
     height: auto;
 }
  
+
 
 
 
