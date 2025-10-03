@@ -2,7 +2,7 @@
     display: flex;
     flex-wrap: wrap;       
     gap: 18px;             
-    justify-content: left;  
+    justify-content: center;  
     padding: 10px 0;
 }
 
@@ -58,6 +58,7 @@
 .btn:hover {
     background-color: #0056b3;
 }
+
 
 
 
