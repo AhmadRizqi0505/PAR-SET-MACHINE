@@ -105,7 +105,7 @@ main {
     overflow: hidden;
 }
 
-.dropdown-content.show {
+dropdown:hover .dropdown-content.show {
     display: block ;
 }
 
@@ -165,6 +165,7 @@ main {
     height: auto;
 }
  
+
 
 
 
