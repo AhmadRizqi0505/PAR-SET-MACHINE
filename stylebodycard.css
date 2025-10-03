@@ -1,30 +1,28 @@
-body .card-container {
-    width: 100%;               /* full layar */
+.card1-content main {
     display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;         /* biar penuh tinggi layar */
-    background-color: #f0f0f0;
-    margin: 0;
-    padding: 10px;
+    flex-wrap: wrap;       /* supaya turun ke bawah kalau tidak muat */
+    gap: 20px;             /* jarak antar card */
+    justify-content: center;  /* biar rata tengah */
+    padding: 10px 0;
+}
+
+.column {
+    flex: 1 1 200px;       /* minimal lebar 200px, fleksibel */
+    max-width: 220px;      /* maksimal lebar tiap card */
 }
 
 .card1 {
-    width: 100%;               /* biar fleksibel penuh */
-    max-width: 1200px;         /* batas maksimal biar gak terlalu melebar */
-    border: 0.3px solid #ddd;
+    background: #fff;
+    padding: 20px;
     border-radius: 8px;
-    overflow: hidden;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    background-color: white;
+    text-align: center;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-    margin: auto;
-    font-family: "Arial Black", Arial, sans-serif;
 }
 
 .card1:hover {
     transform: translateY(-5px);
-    box-shadow: 0 8px 8px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 8px 16px rgba(0,0,0,0.2);
 }
 
 .card1-content {
@@ -60,6 +58,7 @@ body .card-container {
 .btn:hover {
     background-color: #0056b3;
 }
+
 
 
 
