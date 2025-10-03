@@ -93,7 +93,7 @@ main {
 
 .dropdown-content {
     display: none;
-    position: absolute;
+    position: static;
     background-color: #ffffff;   
     min-width: 200px;
     box-shadow: 0px 4px 12px rgba(0,0,0,0.15);
@@ -124,20 +124,36 @@ main {
 }
 
 
-    @media screen and (max-width: 600px) {
-    .topnav a:not(:first-child) { display: none; }
+ @media screen and (max-width: 600px) {
+    /* Sembunyikan semua item menu kecuali tombol icon */
+    .topnav a, 
+    .topnav .dropdown {
+        display: none;
+    }
+
     .topnav a.icon {
         display: block;
+        margin-left: auto;
     }
+
+    /* Saat topnav aktif (responsive), tampilkan semuanya */
     .topnav.responsive {
         position: relative;
         flex-direction: column;
         align-items: flex-start;
     }
-    .topnav.responsive a {
+
+    .topnav.responsive a,
+    .topnav.responsive .dropdown {
         display: block;
-        text-align: left;
         width: 100%;
+        text-align: left;
+    }
+
+    .topnav.responsive .dropdown-content {
+        position: static; /* biar ikut alur menu */
+        box-shadow: none;
+        border-radius: 0;
     }
 }
 
@@ -149,3 +165,4 @@ main {
     height: auto;
 }
  
+
