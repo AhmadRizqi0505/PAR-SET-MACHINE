@@ -21,7 +21,7 @@ main {
     width: 100%;
     font-size: 15px;
     letter-spacing: 0.5px;
-    margin-top: auto; /* biar nempel bawah */
+    margin-top: auto;
     z-index: 10;
     font-weight: 500;
 }
@@ -91,22 +91,38 @@ main {
     display: inline-block;
 }
 
+/* Awal dropdown disembunyikan dan siap animasi */
 .dropdown-content {
-    display: none;
     position: absolute;  
     background-color: #ffffff;   
     width: 150px;
     box-shadow: 0px 4px 12px rgba(0,0,0,0.15);
     z-index: 20;
-    top: 100%;   /* muncul tepat di bawah menu utama */
+    top: 100%;
     left: 0;
     border-radius: 6px;
     padding: 0; 
     overflow: hidden;
+    
+    /* Animasi */
+    opacity: 0;
+    max-height: 0;
+    transition: all 0.3s ease;
+    transform-origin: top;
 }
 
-.dropdown:hover .dropdown-content {
-    display: block ;
+/* Efek hover hanya aktif di perangkat dengan mouse */
+@media (hover: hover) {
+  .dropdown:hover .dropdown-content {
+    opacity: 1;
+    max-height: 500px;
+  }
+}
+
+/* Saat diklik di HP */
+.dropdown-content.show {
+    opacity: 1;
+    max-height: 500px;
 }
 
 .dropdown-content a {
@@ -120,12 +136,11 @@ main {
 }
 
 .dropdown-content a:hover {
-    background-color: #f5f5f5; /* abu muda pas hover */
+    background-color: #f5f5f5;
 }
 
-
- @media screen and (max-width: 600px) {
-    /* Sembunyikan semua item menu kecuali tombol icon */
+/* --- Responsive navbar --- */
+@media screen and (max-width: 600px) {
     .topnav a, 
     .topnav .dropdown {
         display: none;
@@ -136,7 +151,6 @@ main {
         margin-left: auto;
     }
 
-    /* Saat topnav aktif (responsive), tampilkan semuanya */
     .topnav.responsive {
         position: relative;
         flex-direction: column;
@@ -151,28 +165,19 @@ main {
     }
 
     .topnav.responsive .dropdown-content {
-        position: static; /* biar ikut alur menu */
+        position: static;
         box-shadow: none;
         border-radius: 0;
+        opacity: 1;
+        max-height: 500px;
+        transition: all 0.3s ease;
     }
 }
 
-/* --- Misc --- */
+/* --- Gambar --- */
 .plant-image {
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0,0,0,0.1);
     max-width: 100%;
     height: auto;
 }
- 
-
-
-
-
-
-
-
-
-
-
-
