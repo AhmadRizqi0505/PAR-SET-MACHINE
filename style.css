@@ -50,41 +50,38 @@ main {
     z-index: 10;
 }
 
-/* --- Navbar / Topnav --- */
-.topnav {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: #155FE8;
-    padding: 18px 0 10px 0;
-    gap: 18px;
-}
+/* --- Topnav --- */
+.topnav { 
+    background: #155FE8; 
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+    gap: 20px; 
+    padding: 0 20px;
+    flex-wrap: wrap; 
+} 
 
-.topnav a {
-    font-size: 18px;
-    padding: 6px 18px;
-    letter-spacing: 0.5px;
-    display: inline-block;
-    color: #fff;
-    text-decoration: none;
-    border-radius: 4px;
-    transition: background 0.2s;
-    background-color: #155FE8;
-}
+.topnav a { 
+    color: white; 
+    padding: 14px 20px; 
+    text-decoration: none; 
+    font-size: 17px; 
+    display: block; 
+} 
 
-.topnav a:hover {
-    background: #333;
-}
+.topnav a:hover { 
+    background: #155FE8; 
+} 
 
 .topnav a.active {
-    background: #155FE8;
-    color: white;
+     background: #155FE8; 
+     color: white; 
+    
 }
 
-.topnav .icon {
-    display: none;
+.topnav .icon { 
+    display: none; 
 }
-
 /* --- Dropdown --- */
 .dropdown {
     position: relative;
@@ -92,63 +89,109 @@ main {
 }
 
 /* Awal dropdown disembunyikan dan siap animasi */
-.dropdown-content {
-  position: absolute;
-  background-color: #ffffff;
-  width: 150px;
-  box-shadow: 0px 4px 12px rgba(0,0,0,0.15);
-  z-index: 20;
-  top: 100%;
-  left: 0;
-  border-radius: 6px;
-  padding: 0;
-  overflow: hidden;
-  
-  opacity: 0;
-  max-height: 0;
-  transition: all 0.3s ease;
-  transform-origin: top;
+.dropdown-content { 
+    display: none; 
+    position: absolute; 
+    top: 100%; 
+    left: 0; 
+    background: white; 
+    min-width: 100px; 
+    box-shadow: 0 8px 16px rgba(0,0,0,0.3); 
+    z-index: 999; 
+    border-radius: 4px;
+    opacity: 1;
+}
+
+.dropdown-content a { 
+  color: black; 
+  padding: 10px 14px; 
+  display: block;
+  font-size: 12px; 
+  white-space: nowrap; /* biar teks ga pecah */
+}
+
+.dropdown-content.to-top {
+  top: auto;
+  bottom: 100%;
 }
 
 /* Efek hover hanya aktif di perangkat dengan mouse */
 @media (min-width: 601px) {
   .dropdown:hover .dropdown-content {
-    opacity: 1;
-    max-height: 500px;
+    display: grid;                         /* aktifkan grid */
+    grid-template-columns: repeat(2, 1fr); /* pecah 2 kolom */
+    gap: 10px;
+    max-height: none;                      /* biar ga scroll */
+    transition: all 0.3s ease;
   }
 }
-/* settingan di hp */
+
 .dropdown-content.show {
-  display: block;
+  display: block !important;
   position: static;
   box-shadow: none;
   border-radius: 0;
   width: 100%;
-  background-color: #1976d2; /* biar serasi dengan tema */
+  background-color: #fff; /* biar serasi dengan tema */
   opacity: 1;
   max-height: 500px;
 }
 
-.dropdown-content a {
-  display: block;
-  padding: 12px 16px;
-  text-decoration: none;
-  font-size: 16px;
-  color: #222;
-  background-color: #fff;
-  transition: background 0.2s;
+.dropdown-content a:hover { 
+    background: #ddd; 
 }
 
-.dropdown-content a:hover {
-  background-color: #f5f5f5;
+.dropdown-sub { 
+    position: relative; 
 }
+
+.dropdown-sub > a::after {
+  content: "▶";
+  float: right;
+}
+
+.dropdown-submenu { 
+    display: none; 
+    position: absolute; 
+    top: 0; 
+    left: 100%; 
+    background: #f1f1f1; 
+    min-width: 180px; 
+    box-shadow: 0 8px 16px rgba(0,0,0,0.2); 
+    z-index: 999;
+    border-radius: 4px;
+}
+
+.dropdown-submenu a { 
+    padding: 10px 14px; 
+}
+
+.dropdown-sub:hover .dropdown-submenu {
+    display: block;
+}
+
+.dropdown-submenu.left {
+  left: auto;
+  right: 100%; 
+}
+
 
 /* --- Responsive navbar --- */
-@media screen and (max-width: 600px) {
-    .topnav a, 
-    .topnav .dropdown {
-        display: none;
-    }
+@media (max-width: 600px) {
+  .dropdown-content {
+    display: none;  
+    max-height: 400px; 
+    overflow-y: auto;
+    transition: all 0.3s ease;
+    grid-template-columns: 1fr; /* satu kolom di mobile */
+    gap: 0; /* hilangkan jarak antar item */
+
+  }
+
+  .dropdown-content.show {
+    display: block !important;
+  }
+
 
     .topnav a.icon {
         display: block;
@@ -178,6 +221,7 @@ main {
     }
 }
 
+
 /* --- Gambar --- */
 .plant-image {
     border-radius: 8px;
@@ -185,6 +229,3 @@ main {
     max-width: 100%;
     height: auto;
 }
-
-
-
