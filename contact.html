@@ -58,29 +58,8 @@
     <b>Created by Ahmad Rizqi Gustiansyah (IT DEPARTMENT)</b>
 </footer>
 
-    <script>
-            function toggleSubMenu(event) {
-            event.preventDefault();
-            var submenu = document.getElementById('SettingSubMenu');
-            submenu.classList.toggle('show');
-            // Optional: close dropdown if click outside
-            document.addEventListener('click', function handler(e) {
-                if (!submenu.parentElement.contains(e.target)) {
-                    submenu.classList.remove('show');
-                    document.removeEventListener('click', handler);
-                }
-            });
-        }
-
-            function myFunction() {
-        var x = document.getElementById("myTopnav");
-        if (x.className === "topnav") {
-            x.className += " responsive";
-        } else {
-            x.className = "topnav";
-        }
-}
-    </script>
+    <script src="scriptparset.js"></script>
 
 </body>
+
 </html>
