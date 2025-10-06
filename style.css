@@ -177,51 +177,51 @@ main {
 
 
 /* --- Responsive navbar --- */
-@media (max-width: 600px) {
-  .dropdown-content {
-    display: none;  
-    max-height: 400px; 
-    overflow-y: auto;
-    transition: all 0.3s ease;
-    grid-template-columns: 1fr; /* satu kolom di mobile */
-    gap: 0; /* hilangkan jarak antar item */
+@media screen and (max-width: 600px) {
+  .topnav a:not(:first-child),
+  .topnav .dropdown {
+    display: none; /* Sembunyikan semua link dan dropdown */
+  }
 
+  .topnav a.icon {
+    float: right;
+    display: block; /* Tampilkan hanya icon garis tiga */
+  }
+
+  .topnav.responsive {
+    position: relative;
+  }
+
+  .topnav.responsive a.icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+
+  .topnav.responsive a,
+  .topnav.responsive .dropdown {
+    float: none;
+    display: block; /* Tampilkan semua link setelah diklik garis tiga */
+    text-align: left;
+    width: 100%;
+  }
+
+  /* Dropdown di mode responsive */
+  .topnav.responsive .dropdown-content {
+    position: relative;
+    background: #1565c0;
+    box-shadow: none;
+    width: 100%;
+  }
+
+  .topnav.responsive .dropdown-content a {
+    padding-left: 30px;
   }
 
   .dropdown-content.show {
     display: block !important;
   }
-
-
-    .topnav a.icon {
-        display: block;
-        margin-left: auto;
-    }
-
-    .topnav.responsive {
-        position: relative;
-        flex-direction: column;
-        align-items: flex-start;
-    }
-
-    .topnav.responsive a,
-    .topnav.responsive .dropdown {
-        display: block;
-        width: 100%;
-        text-align: left;
-    }
-
-    .topnav.responsive .dropdown-content {
-        position: static;
-        box-shadow: none;
-        border-radius: 0;
-        opacity: 1;
-        max-height: 500px;
-        transition: all 0.3s ease;
-    }
 }
-
-
 /* --- Gambar --- */
 .plant-image {
     border-radius: 8px;
@@ -229,3 +229,4 @@ main {
     max-width: 100%;
     height: auto;
 }
+
