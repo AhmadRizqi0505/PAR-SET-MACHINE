@@ -118,14 +118,19 @@ main {
 /* Efek hover hanya aktif di perangkat dengan mouse */
 @media (min-width: 601px) {
   .dropdown:hover .dropdown-content {
-    display: grid;                         /* aktifkan grid */
-    grid-template-columns: repeat(2, 1fr); /* pecah 2 kolom */
-    gap: 10px;
-    max-height: none;                      /* biar ga scroll */
-    transition: all 0.3s ease;
+    display: block !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+    transition: none !important; /* hilangkan animasi delay */
+  }
+
+  .dropdown:hover .dropdown-submenu {
+    display: block !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+    transition: none !important;
   }
 }
-
 .dropdown-content.show {
   display: block !important;
   position: static;
@@ -176,63 +181,59 @@ main {
 }
 
 @media screen and (max-width: 600px) {
-
-  /* Pastikan menu utama berubah menjadi vertikal */
-  .topnav.responsive {
-    position: relative;
+      
+.topnav .icon {
     display: block;
-    width: 100%;
+    position: absolute;
+    right: 16px;
+    top: 14px;
+    font-size: 22px;
+    cursor: pointer;
+    color: white;
+  }
+
+  .topnav a,
+  .topnav.dropdown {
+    display: none;
   }
 
   .topnav.responsive a,
-  .topnav.responsive .dropdown > a {
+  .topnav.responsive.dropdown {
     display: block;
     text-align: left;
-    padding: 12px 16px;
-    border-bottom: 1px solid rgba(255,255,255,0.2);
+    width: 100%;
   }
 
-  /* Dropdown agar tetap di dalam hamburger */
+  /* Dropdown content jadi tidak absolute di HP */
   .topnav.responsive .dropdown-content {
-    position: relative;   /* ini penting */
-    display: none;        /* default: sembunyi */
-    width: 100%;          /* penuhi lebar nav */
+    position: static;
     background: #fff;
     box-shadow: none;
-    z-index: 10;
     border-radius: 0;
+    width: 100%;
+    display: none;
   }
 
   .topnav.responsive .dropdown-content.show {
     display: block;
   }
 
-  /* Link di dalam dropdown */
-  .topnav.responsive .dropdown-content a {
-    color: #000;
-    text-align: left;
-    padding: 10px 20px;
-    border-bottom: 1px solid #eee;
-  }
-
-  /* Submenu tetap rapi di dalam menu */
   .topnav.responsive .dropdown-submenu {
-    position: relative;
-    left: 0;
-    background: #f9f9f9;
-  }
-
-  .topnav.responsive .dropdown-sub a {
-    font-weight: 600;
+    position: static;
+    background: #f1f1f1;
+    border-left: 3px solid #ddd;
   }
 
   .topnav.responsive .dropdown-submenu a {
-    padding-left: 32px; /* sedikit inden biar kelihatan hierarki */
+    padding-left: 28px;
   }
 
-  /* Simbol panah biar tak berantakan */
-  .topnav.responsive .dropdown > a::after {
-    content: "";
+  .topnav.responsive .dropdown-submenu .dropdown-submenu {
+    display: none;
+  }
+
+  .topnav.responsive .dropdown-submenu.show {
+    display: block;
   }
 }
 
@@ -243,6 +244,7 @@ main {
     max-width: 100%;
     height: auto;
 }
+
 
 
 
