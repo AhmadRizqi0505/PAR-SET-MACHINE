@@ -175,47 +175,64 @@ main {
   right: 100%; 
 }
 
-/* --- Perbaikan dropdown di mode mobile --- */
-@media (max-width: 600px) {
-  /* Biar isi dropdown bisa di-scroll */
-  .topnav.responsive .dropdown-content {
-    max-height: 60vh;      /* batasi tinggi agar tidak sepanjang layar */
-    overflow-y: auto;      /* aktifkan scroll vertikal */
-    background: #1976d2;   /* sesuaikan warna biar senada */
-    color: white;
+@media screen and (max-width: 600px) {
+
+  /* Pastikan menu utama berubah menjadi vertikal */
+  .topnav.responsive {
+    position: relative;
+    display: block;
+    width: 100%;
   }
 
-  /* Warna dan jarak antar item */
-  .topnav.responsive .dropdown-content a {
-    color: white;
-    padding: 10px 20px;
+  .topnav.responsive a,
+  .topnav.responsive .dropdown > a {
+    display: block;
+    text-align: left;
+    padding: 12px 16px;
     border-bottom: 1px solid rgba(255,255,255,0.2);
   }
 
-  .topnav.responsive .dropdown-content a:hover {
-    background: rgba(255,255,255,0.15);
+  /* Dropdown agar tetap di dalam hamburger */
+  .topnav.responsive .dropdown-content {
+    position: relative;   /* ini penting */
+    display: none;        /* default: sembunyi */
+    width: 100%;          /* penuhi lebar nav */
+    background: #fff;
+    box-shadow: none;
+    z-index: 10;
+    border-radius: 0;
   }
 
-  /* Submenu di dalam dropdown */
+  .topnav.responsive .dropdown-content.show {
+    display: block;
+  }
+
+  /* Link di dalam dropdown */
+  .topnav.responsive .dropdown-content a {
+    color: #000;
+    text-align: left;
+    padding: 10px 20px;
+    border-bottom: 1px solid #eee;
+  }
+
+  /* Submenu tetap rapi di dalam menu */
   .topnav.responsive .dropdown-submenu {
     position: relative;
     left: 0;
-    background: #1565c0;
-    margin-left: 10px;
-    padding-left: 10px;
+    background: #f9f9f9;
+  }
+
+  .topnav.responsive .dropdown-sub a {
+    font-weight: 600;
   }
 
   .topnav.responsive .dropdown-submenu a {
-    color: #fff;
-    padding: 8px 20px;
+    padding-left: 32px; /* sedikit inden biar kelihatan hierarki */
   }
 
-  /* Panah di kanan untuk indikasi submenu */
-  .dropdown-sub > a::after {
-    content: "▼";
-    float: right;
-    font-size: 10px;
-    margin-top: 4px;
+  /* Simbol panah biar tak berantakan */
+  .topnav.responsive .dropdown > a::after {
+    content: "";
   }
 }
 
@@ -226,6 +243,7 @@ main {
     max-width: 100%;
     height: auto;
 }
+
 
 
 
