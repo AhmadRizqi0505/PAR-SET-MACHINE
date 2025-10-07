@@ -176,52 +176,41 @@ main {
 }
 
 
-/* --- Responsive navbar --- */
-@media screen and (max-width: 600px) {
-  .topnav a:not(:first-child),
-  .topnav .dropdown {
-    display: none; /* Sembunyikan semua link dan dropdown */
-  }
-
+@media (max-width: 600px) {
   .topnav a.icon {
-    float: right;
-    display: block; /* Tampilkan hanya icon garis tiga */
+    display: block;
+    margin-left: auto;
   }
 
   .topnav.responsive {
     position: relative;
-  }
-
-  .topnav.responsive a.icon {
-    position: absolute;
-    right: 0;
-    top: 0;
+    flex-direction: column;
+    align-items: flex-start;
+    background: #155FE8;
+    padding-bottom: 10px;
   }
 
   .topnav.responsive a,
   .topnav.responsive .dropdown {
-    float: none;
-    display: block; /* Tampilkan semua link setelah diklik garis tiga */
+    display: block;
+    width: 100%;
     text-align: left;
-    width: 100%;
+    color: white;
   }
 
-  /* Dropdown di mode responsive */
   .topnav.responsive .dropdown-content {
-    position: relative;
-    background: #1565c0;
+    position: static;
     box-shadow: none;
-    width: 100%;
+    border-radius: 0;
+    display: none;
+    background: white;
   }
 
-  .topnav.responsive .dropdown-content a {
-    padding-left: 30px;
-  }
-
-  .dropdown-content.show {
+  .topnav.responsive .dropdown-content.show {
     display: block !important;
   }
 }
+
 /* --- Gambar --- */
 .plant-image {
     border-radius: 8px;
@@ -229,4 +218,5 @@ main {
     max-width: 100%;
     height: auto;
 }
+
 
