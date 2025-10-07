@@ -1,55 +1,56 @@
 document.addEventListener("DOMContentLoaded", function() {
-  const dropdownBtn = document.querySelector(".dropdown > a");
-  const dropdownContent = document.getElementById("SettingSubMenu");
+  const dropdowns = document.querySelectorAll(".dropdown > a");
+  const subDropdowns = document.querySelectorAll(".dropdown-sub > a");
 
-  // Handle klik dropdown di HP
-  dropdownBtn.addEventListener("click", function(e) {
-    if (window.innerWidth <= 600) { // hanya aktif di HP
-      e.preventDefault();
-      dropdownContent.classList.toggle("show");
-    }
-  });
-
-  // Klik di luar area -> tutup dropdown
-  document.addEventListener("click", function(e) {
-    if (!e.target.closest(".dropdown") && !e.target.closest(".icon")) {
-      dropdownContent.classList.remove("show");
-    }
-  });
-
-  // Fungsi hamburger menu
+  // === Fungsi hamburger ===
   window.myFunction = function() {
     const nav = document.getElementById("myTopnav");
-    if (nav.className === "topnav") {
-      nav.className += " responsive";
-    } else {
-      nav.className = "topnav";
-    }
+    nav.classList.toggle("responsive");
   };
 
-  // Cek tinggi dropdown untuk posisi atas/bawah (khusus desktop)
-  document.querySelectorAll('.dropdown').forEach(drop => {
-    const menu = drop.querySelector('.dropdown-content');
+  // === Toggle dropdown utama (Parameter Setting MC) ===
+  dropdowns.forEach(btn => {
+    btn.addEventListener("click", function(e) {
+      if (window.innerWidth <= 600) {
+        e.preventDefault();
+        const content = this.nextElementSibling;
 
-    drop.addEventListener('mouseenter', function() {
-      if (!menu) return;
+        // Tutup dropdown lain
+        document.querySelectorAll(".dropdown-content.show").forEach(menu => {
+          if (menu !== content) menu.classList.remove("show");
+        });
 
-      // sementara tampil buat ukur tinggi
-      menu.style.visibility = 'hidden';
-      menu.style.display = 'block';
-
-      const rect = menu.getBoundingClientRect();
-      const windowHeight = window.innerHeight;
-
-      if (rect.bottom > windowHeight) {
-        menu.classList.add("to-top");
-      } else {
-        menu.classList.remove("to-top");
+        content.classList.toggle("show");
       }
-
-      // balikin lagi
-      menu.style.visibility = '';
-      menu.style.display = '';
     });
+  });
+
+  // === Toggle submenu (MC 30, MC 40, dll) ===
+  subDropdowns.forEach(btn => {
+    btn.addEventListener("click", function(e) {
+      if (window.innerWidth <= 600) {
+        e.preventDefault();
+        const submenu = this.nextElementSibling;
+        
+        // Tutup submenu lain di level yang sama
+        this.parentElement.parentElement
+          .querySelectorAll(".dropdown-submenu.show")
+          .forEach(sm => {
+            if (sm !== submenu) sm.classList.remove("show");
+          });
+
+        submenu.classList.toggle("show");
+      }
+    });
+  });
+
+  // Tutup dropdown jika klik di luar
+  document.addEventListener("click", function(e) {
+    if (window.innerWidth <= 600 &&
+        !e.target.closest(".dropdown") &&
+        !e.target.closest(".icon")) {
+      document.querySelectorAll(".dropdown-content.show, .dropdown-submenu.show")
+        .forEach(menu => menu.classList.remove("show"));
+    }
   });
 });
