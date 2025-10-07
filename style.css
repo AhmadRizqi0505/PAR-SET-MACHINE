@@ -118,10 +118,11 @@ main {
 /* Efek hover hanya aktif di perangkat dengan mouse */
 @media (min-width: 601px) {
   .dropdown:hover .dropdown-content {
-    display: block !important;
+    display: grid !important;
     opacity: 1 !important;
+    grid-template-column: repeat(2, 1 fr);
     visibility: visible !important;
-    transition: all 0.03s !important; /* hilangkan animasi delay */
+    transition: all 0.03s !important; 
   }
 
 }
@@ -238,6 +239,7 @@ main {
     max-width: 100%;
     height: auto;
 }
+
 
 
 
