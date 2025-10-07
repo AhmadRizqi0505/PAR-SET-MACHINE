@@ -175,39 +175,47 @@ main {
   right: 100%; 
 }
 
-
+/* --- Perbaikan dropdown di mode mobile --- */
 @media (max-width: 600px) {
-  .topnav a.icon {
-    display: block;
-    margin-left: auto;
-  }
-
-  .topnav.responsive {
-    position: relative;
-    flex-direction: column;
-    align-items: flex-start;
-    background: #155FE8;
-    padding-bottom: 10px;
-  }
-
-  .topnav.responsive a,
-  .topnav.responsive .dropdown {
-    display: block;
-    width: 100%;
-    text-align: left;
+  /* Biar isi dropdown bisa di-scroll */
+  .topnav.responsive .dropdown-content {
+    max-height: 60vh;      /* batasi tinggi agar tidak sepanjang layar */
+    overflow-y: auto;      /* aktifkan scroll vertikal */
+    background: #1976d2;   /* sesuaikan warna biar senada */
     color: white;
   }
 
-  .topnav.responsive .dropdown-content {
-    position: static;
-    box-shadow: none;
-    border-radius: 0;
-    display: none;
-    background: white;
+  /* Warna dan jarak antar item */
+  .topnav.responsive .dropdown-content a {
+    color: white;
+    padding: 10px 20px;
+    border-bottom: 1px solid rgba(255,255,255,0.2);
   }
 
-  .topnav.responsive .dropdown-content.show {
-    display: block !important;
+  .topnav.responsive .dropdown-content a:hover {
+    background: rgba(255,255,255,0.15);
+  }
+
+  /* Submenu di dalam dropdown */
+  .topnav.responsive .dropdown-submenu {
+    position: relative;
+    left: 0;
+    background: #1565c0;
+    margin-left: 10px;
+    padding-left: 10px;
+  }
+
+  .topnav.responsive .dropdown-submenu a {
+    color: #fff;
+    padding: 8px 20px;
+  }
+
+  /* Panah di kanan untuk indikasi submenu */
+  .dropdown-sub > a::after {
+    content: "▼";
+    float: right;
+    font-size: 10px;
+    margin-top: 4px;
   }
 }
 
@@ -218,5 +226,6 @@ main {
     max-width: 100%;
     height: auto;
 }
+
 
 
