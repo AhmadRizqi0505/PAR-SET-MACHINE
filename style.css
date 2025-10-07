@@ -121,7 +121,7 @@ main {
     display: block !important;
     opacity: 1 !important;
     visibility: visible !important;
-    transition: none !important; /* hilangkan animasi delay */
+    transition: all 0.03s !important; /* hilangkan animasi delay */
   }
 
 }
@@ -238,6 +238,7 @@ main {
     max-width: 100%;
     height: auto;
 }
+
 
 
 
