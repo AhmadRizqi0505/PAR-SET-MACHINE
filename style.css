@@ -53,7 +53,6 @@ main {
 /* --- Topnav --- */
 .topnav {
   background-color: #155FE8;
-  overflow: flex;
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
@@ -195,6 +194,7 @@ main {
     max-width: 100%;
     height: auto;
 }
+
 
 
 
