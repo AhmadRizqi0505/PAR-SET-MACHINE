@@ -85,7 +85,6 @@ main {
   display: grid;
   position: absolute;
   top: 100%;
-  left: 0;
   background-color: #fff;
   min-width: 150px;
   box-shadow: 0 4px 8px rgba(0,0,0,0.1);
@@ -197,6 +196,7 @@ main {
     max-width: 100%;
     height: auto;
 }
+
 
 
 
