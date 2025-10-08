@@ -113,9 +113,10 @@ main {
 }
 
 .dropdown-submenu {
-  display: left;
+  display: none;
   background-color: #fff;
   border-left: 3px solid #1976d2;
+  left: 100%;
   grid-template-columns: repeat(2, 1fr);
   gap: 0;
 }
@@ -197,6 +198,7 @@ main {
     max-width: 100%;
     height: auto;
 }
+
 
 
 
