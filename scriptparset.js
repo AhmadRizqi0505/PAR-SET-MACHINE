@@ -1,56 +1,32 @@
-document.addEventListener("DOMContentLoaded", function() {
-  const dropdowns = document.querySelectorAll(".dropdown > a");
-  const subDropdowns = document.querySelectorAll(".dropdown-sub > a");
+// === Toggle Hamburger Menu ===
+function myFunction() {
+  var nav = document.getElementById("myTopnav");
+  if (nav.className === "topnav") {
+    nav.className += " responsive";
+  } else {
+    nav.className = "topnav";
+  }
+}
 
-  // === Fungsi hamburger ===
-  window.myFunction = function() {
-    const nav = document.getElementById("myTopnav");
-    nav.classList.toggle("responsive");
-  };
-
-  // === Toggle dropdown utama (Parameter Setting MC) ===
-  dropdowns.forEach(btn => {
-    btn.addEventListener("click", function(e) {
-      if (window.innerWidth <= 600) {
+// === Dropdown toggle for mobile ===
+document.addEventListener("DOMContentLoaded", function () {
+  // Toggle main dropdown
+  document.querySelectorAll(".dropdown > a").forEach(link => {
+    link.addEventListener("click", function (e) {
+      if (window.innerWidth <= 768) {
         e.preventDefault();
-        const content = this.nextElementSibling;
-
-        // Tutup dropdown lain
-        document.querySelectorAll(".dropdown-content.show").forEach(menu => {
-          if (menu !== content) menu.classList.remove("show");
-        });
-
-        content.classList.toggle("show");
+        this.parentElement.classList.toggle("open");
       }
     });
   });
 
-  // === Toggle submenu (MC 30, MC 40, dll) ===
-  subDropdowns.forEach(btn => {
-    btn.addEventListener("click", function(e) {
-      if (window.innerWidth <= 600) {
+  // Toggle sub-dropdown
+  document.querySelectorAll(".dropdown-sub > a").forEach(link => {
+    link.addEventListener("click", function (e) {
+      if (window.innerWidth <= 768) {
         e.preventDefault();
-        const submenu = this.nextElementSibling;
-        
-        // Tutup submenu lain di level yang sama
-        this.parentElement.parentElement
-          .querySelectorAll(".dropdown-submenu.show")
-          .forEach(sm => {
-            if (sm !== submenu) sm.classList.remove("show");
-          });
-
-        submenu.classList.toggle("show");
+        this.parentElement.classList.toggle("open");
       }
     });
-  });
-
-  // Tutup dropdown jika klik di luar
-  document.addEventListener("click", function(e) {
-    if (window.innerWidth <= 600 &&
-        !e.target.closest(".dropdown") &&
-        !e.target.closest(".icon")) {
-      document.querySelectorAll(".dropdown-content.show, .dropdown-submenu.show")
-        .forEach(menu => menu.classList.remove("show"));
-    }
   });
 });
