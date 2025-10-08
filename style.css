@@ -91,7 +91,6 @@ main {
   box-shadow: 0 4px 8px rgba(0,0,0,0.1);
   border-top: 3px solid #1976d2;
   z-index: 20;
-  grid-template-column: repeat(2, 1fr);
   gap: 5px;
 }
 
@@ -101,6 +100,7 @@ main {
   text-decoration: none;
   display: block;
   border-bottom: 1px solid #1976d2;
+  grid-template-column: repeat(2, 1fr);
 }
 
 .dropdown-content a:hover {
@@ -198,6 +198,7 @@ main {
     max-width: 100%;
     height: auto;
 }
+
 
 
 
