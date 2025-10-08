@@ -100,7 +100,6 @@ main {
   text-decoration: none;
   display: block;
   border-bottom: 1px solid #1976d2;
-  grid-template-column: repeat(2, 1fr);
 }
 
 .dropdown-content a:hover {
@@ -198,6 +197,7 @@ main {
     max-width: 100%;
     height: auto;
 }
+
 
 
 
