@@ -53,10 +53,10 @@ main {
 /* --- Topnav --- */
 .topnav {
   background-color: #155FE8;
-  display: grid;
+  display: flex;
   justify-content: center;
-  grid-template-column: repeat (2, 1fr);
   position: relative;
+  flex-wrap: wrap;
   z-index: 10;
   gap: 10px;
 }
