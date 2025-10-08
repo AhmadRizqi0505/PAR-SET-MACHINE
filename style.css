@@ -87,7 +87,7 @@ main {
   top: 100%;
   left: 0;
   background-color: #fff;
-  min-width: 200px;
+  min-width: 150px;
   box-shadow: 0 4px 8px rgba(0,0,0,0.1);
   border-top: 3px solid #1976d2;
   z-index: 20;
@@ -113,7 +113,7 @@ main {
 }
 
 .dropdown-submenu {
-  display: none;
+  display: left;
   background-color: #fff;
   border-left: 3px solid #1976d2;
   grid-template-columns: repeat(2, 1fr);
@@ -197,6 +197,7 @@ main {
     max-width: 100%;
     height: auto;
 }
+
 
 
 
