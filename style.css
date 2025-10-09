@@ -190,7 +190,7 @@ main {
   .dropdown > a {
     text-align: left;
     padding: 12px 20px;
-    font-size: 12px;
+    font-size: 13px;
     border-bottom: 1px solid #fff;
   }
 
@@ -211,20 +211,21 @@ main {
     width: 100%;
   }
 
-  /* Mobile dropdown & submenu */
+  /* --- Dropdown di mobile --- */
   .dropdown-content,
   .dropdown-submenu {
     position: static;
-    box-shadow: none;
-    background-color: #fff;
     display: none;
+    background: #f9f9f9;
+    padding-left: 15px; /* indentasi */
+    border-left: 3px solid #1976d2;
   }
 
   .dropdown-content a,
   .dropdown-submenu a {
     color: #000;
-    font-size: 12px;
-    border-bottom: 1px solid #1976d2;
+    font-size: 13px;
+    border-bottom: 1px solid #ddd;
   }
 
   .dropdown.open > .dropdown-content {
@@ -233,6 +234,22 @@ main {
 
   .dropdown-sub.open > .dropdown-submenu {
     display: block;
+  }
+
+  /* Panah submenu */
+  .dropdown-sub > a::after {
+    content: "▼";
+    position: absolute;
+    right: 16px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 11px;
+    color: #1976d2;
+    transition: transform 0.3s ease;
+  }
+
+  .dropdown-sub.open > a::after {
+    transform: translateY(-50%) rotate(180deg);
   }
 }
 
@@ -243,6 +260,7 @@ main {
     max-width: 100%;
     height: auto;
 }
+
 
 
 
