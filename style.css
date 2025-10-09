@@ -190,10 +190,6 @@ main {
     border-bottom: 1px solid #fff;
   }
 
- .icon {
-  display: none;
-}
-
   .topnav.responsive {
     position: relative;
   }
@@ -283,6 +279,7 @@ main {
     max-width: 100%;
     height: auto;
 }
+
 
 
 
