@@ -45,3 +45,11 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   });
 });
+
+window.addEventListener("resize", () => {
+  // Tutup semua dropdown jika beralih dari mobile ke desktop
+  if (window.innerWidth > 768) {
+    document.querySelectorAll(".dropdown, .dropdown-sub").forEach(el => el.classList.remove("open"));
+    document.getElementById("myTopnav").classList.remove("responsive");
+  }
+});
