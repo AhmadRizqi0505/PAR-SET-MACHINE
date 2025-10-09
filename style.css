@@ -97,7 +97,7 @@ main {
   border-radius: 4px;
 }
 .icon {
-    display: none !important;
+    display: none;
 }
 @media screen and (min-width: 769px) {
   .dropdown:hover .dropdown-content {
@@ -180,44 +180,54 @@ main {
 
 /* === MOBILE STYLING === */
 @media screen and (max-width: 768px) {
+
+  /* Ubah layout topnav jadi kolom */
   .topnav {
     flex-direction: column;
-    align-items: stretch;
-  }
-
-  .topnav a,
-  .dropdown > a {
-    text-align: left;
-    padding: 12px 20px;
-    font-size: 13px;
-    border-bottom: 1px solid #fff;
-  }
-
-  .topnav.responsive {
+    align-items: flex-start;
     position: relative;
   }
 
+  /* Tampilkan icon hamburger */
+  .icon {
+    display: block;
+    position: absolute;
+    right: 16px;
+    top: 12px;
+    font-size: 28px;
+    cursor: pointer;
+    color: #fff;
+  }
+
+  /* Sembunyikan semua menu saat belum toggle */
+  .topnav a,
+  .dropdown {
+    display: none;
+    width: 100%;
+    text-align: left;
+  }
+
+  /* Kecuali tombol pertama (Home) kalau kamu mau tetap tampil) */
+  /* .topnav a:first-child { display: block; } */
+
+  /* Saat hamburger ditekan → munculkan menu */
   .topnav.responsive a,
   .topnav.responsive .dropdown {
     display: block;
     width: 100%;
+    border-bottom: 1px solid #fff;
+    background: #155FE8;
   }
 
-  /* --- Dropdown di mobile --- */
+  /* Dropdown & Submenu di mobile */
   .dropdown-content,
   .dropdown-submenu {
     position: static;
     display: none;
-    background: #f9f9f9;
-    padding-left: 15px; /* indentasi */
-    border-left: 3px solid #1976d2;
-  }
-
-  .dropdown-content a,
-  .dropdown-submenu a {
+    background: #fff;
     color: #000;
-    font-size: 13px;
-    border-bottom: 1px solid #ddd;
+    padding-left: 20px;
+    border-left: 3px solid #1976d2;
   }
 
   .dropdown.open > .dropdown-content {
@@ -226,6 +236,22 @@ main {
 
   .dropdown-sub.open > .dropdown-submenu {
     display: block;
+  }
+
+  /* Ubah panah submenu jadi ▼ */
+  .dropdown-sub > a::after {
+    content: "▼";
+    position: absolute;
+    right: 16px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 11px;
+    color: #1976d2;
+    transition: transform 0.3s ease;
+  }
+
+  .dropdown-sub.open > a::after {
+    transform: translateY(-50%) rotate(180deg);
   }
 
   /* Panah submenu */
@@ -281,6 +307,7 @@ main {
     max-width: 100%;
     height: auto;
 }
+
 
 
 
