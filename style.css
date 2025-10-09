@@ -180,15 +180,13 @@ main {
 
 /* === MOBILE STYLING === */
 @media screen and (max-width: 768px) {
-
-  /* Ubah layout topnav jadi kolom */
   .topnav {
     flex-direction: column;
     align-items: flex-start;
     position: relative;
   }
 
-  /* Tampilkan icon hamburger */
+  /* Tombol hamburger */
   .icon {
     display: block;
     position: absolute;
@@ -197,9 +195,10 @@ main {
     font-size: 28px;
     cursor: pointer;
     color: #fff;
+    z-index: 100;
   }
 
-  /* Sembunyikan semua menu saat belum toggle */
+  /* Sembunyikan menu by default */
   .topnav a,
   .dropdown {
     display: none;
@@ -207,19 +206,20 @@ main {
     text-align: left;
   }
 
-  /* Kecuali tombol pertama (Home) kalau kamu mau tetap tampil) */
+  /* Jika ingin Home tetap tampil, aktifkan baris ini */
   /* .topnav a:first-child { display: block; } */
 
-  /* Saat hamburger ditekan → munculkan menu */
+  /* Saat hamburger diklik */
   .topnav.responsive a,
   .topnav.responsive .dropdown {
     display: block;
     width: 100%;
     border-bottom: 1px solid #fff;
     background: #155FE8;
+    text-align: left;
   }
 
-  /* Dropdown & Submenu di mobile */
+  /* Dropdown di mobile */
   .dropdown-content,
   .dropdown-submenu {
     position: static;
@@ -236,22 +236,6 @@ main {
 
   .dropdown-sub.open > .dropdown-submenu {
     display: block;
-  }
-
-  /* Ubah panah submenu jadi ▼ */
-  .dropdown-sub > a::after {
-    content: "▼";
-    position: absolute;
-    right: 16px;
-    top: 50%;
-    transform: translateY(-50%);
-    font-size: 11px;
-    color: #1976d2;
-    transition: transform 0.3s ease;
-  }
-
-  .dropdown-sub.open > a::after {
-    transform: translateY(-50%) rotate(180deg);
   }
 
   /* Panah submenu */
@@ -271,34 +255,6 @@ main {
   }
 }
 
-/* Mobile: tampilkan */
-@media screen and (max-width: 768px) {
-  .icon {
-    display: block;
-    position: absolute;
-    right: 16px;
-    top: 12px;
-    cursor: pointer;
-    font-size: 26px;
-    color: #fff;
-    z-index: 100;
-  }
-
-  /* Hide menu items by default on mobile */
-  .topnav a:not(:first-child),
-  .dropdown {
-    display: none;
-  }
-
-  /* Saat tombol hamburger diklik */
-  .topnav.responsive a,
-  .topnav.responsive .dropdown {
-    display: block;
-    width: 100%;
-    text-align: left;
-    border-bottom: 1px solid #fff;
-  }
-}
 
 /* --- Gambar --- */
 .plant-image {
@@ -307,6 +263,7 @@ main {
     max-width: 100%;
     height: auto;
 }
+
 
 
 
