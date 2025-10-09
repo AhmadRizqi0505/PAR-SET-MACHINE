@@ -99,7 +99,7 @@ main {
 @media screen and (min-width: 769px) {
   .dropdown-content {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(auto-fit, 1fr);
     gap: 6px;
   }
 
@@ -242,4 +242,5 @@ main {
     max-width: 100%;
     height: auto;
 }
+
 
