@@ -87,7 +87,7 @@ main {
   top: 100%;
   left: 0;
   background-color: #fff;
-  min-width: 150px; /* agak lebar */
+  min-width: 200px;
   padding: 10px;
   font-size: 12px;
   box-shadow: 0 4px 8px rgba(0,0,0,0.15);
@@ -243,6 +243,7 @@ main {
     max-width: 100%;
     height: auto;
 }
+
 
 
 
