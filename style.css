@@ -177,9 +177,6 @@ main {
   }
 }
 
-.icon {
-  display: none !important;
-}
 
 /* === MOBILE STYLING === */
 @media screen and (max-width: 768px) {
@@ -284,6 +281,7 @@ main {
     max-width: 100%;
     height: auto;
 }
+
 
 
 
