@@ -82,50 +82,96 @@ main {
 }
 
 .dropdown-content {
-  display: grid;
+  display: none;
   position: absolute;
   top: 100%;
+  left: 0;
   background-color: #fff;
-  min-width: 150px;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  min-width: 300px; /* agak lebar */
+  padding: 10px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.15);
   border-top: 3px solid #1976d2;
   z-index: 20;
-  gap: 5px;
+  border-radius: 4px;
+}
+
+/* 2 kolom di desktop */
+@media screen and (min-width: 769px) {
+  .dropdown-content {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 6px;
+  }
+
+  .dropdown:hover .dropdown-content {
+    display: grid; /* aktifkan grid */
+  }
 }
 
 .dropdown-content a {
   color: #000;
-  padding: 10px 16px;
+  padding: 10px 14px;
   text-decoration: none;
   display: block;
-  border-bottom: 1px solid #1976d2;
+  font-size: 14px;
+  border-radius: 4px;
+  transition: background 0.2s ease;
 }
 
 .dropdown-content a:hover {
   background-color: #e3f2fd;
 }
 
-/* Submenu grid layout */
+/* === SUBMENU === */
 .dropdown-sub {
   position: relative;
 }
 
+.dropdown-sub > a {
+  position: relative;
+  padding-right: 24px; /* ruang untuk panah */
+}
+
+/* tambahkan ikon panah ke kanan */
+.dropdown-sub > a::after {
+  content: "▶";
+  position: absolute;
+  right: 8px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 11px;
+  color: #1976d2;
+}
+
+/* posisi submenu */
 .dropdown-submenu {
   display: none;
+  position: absolute;
+  top: 0;
+  left: 100%; /* muncul ke samping kanan */
   background-color: #fff;
   border-left: 3px solid #1976d2;
-  left: 100%;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 0;
+  min-width: 200px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+  z-index: 25;
+  border-radius: 4px;
 }
 
-.dropdown-sub:hover .dropdown-submenu {
-  display: left;
-}
-
-/* Hover dropdown show */
-.dropdown:hover .dropdown-content {
+.dropdown-submenu a {
+  padding: 10px 14px;
   display: block;
+  color: #000;
+}
+
+.dropdown-submenu a:hover {
+  background-color: #e3f2fd;
+}
+
+/* tampil saat hover di desktop */
+@media screen and (min-width: 769px) {
+  .dropdown-sub:hover .dropdown-submenu {
+    display: block;
+  }
 }
 
 /* === MOBILE STYLING === */
@@ -196,3 +242,4 @@ main {
     max-width: 100%;
     height: auto;
 }
+
