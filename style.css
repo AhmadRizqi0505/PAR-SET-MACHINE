@@ -256,10 +256,14 @@ main {
   }
 
   /* Hide menu links first */
-  .topnav a:not(:first-child),
-  .dropdown {
-    display: none;
-  }
+.topnav a:not(:first-child),
+.dropdown {
+  display: none;
+}
+
+.topnav a.icon {
+  display: block;
+}
 
   /* Show menu when responsive active */
   .topnav.responsive a,
@@ -271,6 +275,20 @@ main {
   }
 }
 
+.icon {
+  z-index: 9999;
+  position: absolute;
+  right: 16px;
+  top: 12px;
+  cursor: pointer;
+  font-size: 26px;
+  color: #fff;
+}
+
+.topnav {
+  position: relative;
+  z-index: 9000;
+}
 
 /* --- Gambar --- */
 .plant-image {
@@ -279,6 +297,7 @@ main {
     max-width: 100%;
     height: auto;
 }
+
 
 
 
