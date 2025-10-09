@@ -190,12 +190,9 @@ main {
     border-bottom: 1px solid #fff;
   }
 
-  .icon {
-    display: block;
-    position: absolute;
-    right: 16px;
-    top: 10px;
-  }
+ .icon {
+  display: none;
+}
 
   .topnav.responsive {
     position: relative;
@@ -249,6 +246,32 @@ main {
   }
 }
 
+/* === Tampilkan hamburger hanya di mobile === */
+@media screen and (max-width: 768px) {
+  .icon {
+    display: block;
+    position: absolute;
+    right: 16px;
+    top: 10px;
+    cursor: pointer;
+    font-size: 20px;
+  }
+
+  /* Saat mode mobile, menu utama disembunyikan dulu */
+  .topnav a:not(:first-child),
+  .dropdown {
+    display: none;
+  }
+
+  /* Saat tombol hamburger ditekan (class .responsive aktif), tampilkan menu */
+  .topnav.responsive a,
+  .topnav.responsive .dropdown {
+    display: block;
+    width: 100%;
+  }
+}
+
+
 /* --- Gambar --- */
 .plant-image {
     border-radius: 8px;
@@ -256,6 +279,7 @@ main {
     max-width: 100%;
     height: auto;
 }
+
 
 
 
