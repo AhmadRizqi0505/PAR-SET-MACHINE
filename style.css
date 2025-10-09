@@ -97,7 +97,7 @@ main {
 
 /* 2 kolom di desktop */
 @media screen and (min-width: 769px) {
-  .dropdown-content {
+  .dropdown:hover .dropdown-content {
     display: grid;
     grid-template-columns: repeat(auto-fit, 1fr);
     gap: 6px;
@@ -242,5 +242,6 @@ main {
     max-width: 100%;
     height: auto;
 }
+
 
 
