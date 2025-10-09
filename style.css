@@ -252,22 +252,26 @@ main {
     display: block;
     position: absolute;
     right: 16px;
-    top: 10px;
+    top: 12px;
     cursor: pointer;
-    font-size: 20px;
+    font-size: 26px;
+    color: #fff;
+    z-index: 100;
   }
 
-  /* Saat mode mobile, menu utama disembunyikan dulu */
+  /* Hide menu links first */
   .topnav a:not(:first-child),
   .dropdown {
     display: none;
   }
 
-  /* Saat tombol hamburger ditekan (class .responsive aktif), tampilkan menu */
+  /* Show menu when responsive active */
   .topnav.responsive a,
   .topnav.responsive .dropdown {
     display: block;
     width: 100%;
+    text-align: left;
+    border-bottom: 1px solid #fff;
   }
 }
 
@@ -279,6 +283,7 @@ main {
     max-width: 100%;
     height: auto;
 }
+
 
 
 
