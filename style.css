@@ -245,7 +245,11 @@ main {
   }
 }
 
-/* === Tampilkan hamburger hanya di mobile === */
+.icon {
+  display: none;
+}
+
+/* Mobile: tampilkan */
 @media screen and (max-width: 768px) {
   .icon {
     display: block;
@@ -258,17 +262,13 @@ main {
     z-index: 100;
   }
 
-  /* Hide menu links first */
-.topnav a:not(:first-child),
-.dropdown {
-  display: none;
-}
+  /* Hide menu items by default on mobile */
+  .topnav a:not(:first-child),
+  .dropdown {
+    display: none;
+  }
 
-.topnav a.icon {
-  display: block;
-}
-
-  /* Show menu when responsive active */
+  /* Saat tombol hamburger diklik */
   .topnav.responsive a,
   .topnav.responsive .dropdown {
     display: block;
@@ -278,21 +278,6 @@ main {
   }
 }
 
-.icon {
-  z-index: 9999;
-  position: absolute;
-  right: 16px;
-  top: 12px;
-  cursor: pointer;
-  font-size: 26px;
-  color: #fff;
-}
-
-.topnav {
-  position: relative;
-  z-index: 9000;
-}
-
 /* --- Gambar --- */
 .plant-image {
     border-radius: 8px;
@@ -300,6 +285,7 @@ main {
     max-width: 100%;
     height: auto;
 }
+
 
 
 
