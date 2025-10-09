@@ -97,6 +97,9 @@ main {
 }
 
 /* 2 kolom di desktop */
+.icon {
+    display: none;
+}
 @media screen and (min-width: 769px) {
   .dropdown:hover .dropdown-content {
     display: grid;
@@ -297,6 +300,7 @@ main {
     max-width: 100%;
     height: auto;
 }
+
 
 
 
