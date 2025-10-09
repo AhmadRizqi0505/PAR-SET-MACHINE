@@ -130,7 +130,7 @@ main {
 
 .dropdown-sub > a {
   position: relative;
-  padding-right: 24px; /* ruang untuk panah */
+  padding-right: 14px; /* ruang untuk panah */
 }
 
 /* tambahkan ikon panah ke kanan */
@@ -173,6 +173,10 @@ main {
   .dropdown-sub:hover .dropdown-submenu {
     display: block;
   }
+}
+
+.icon {
+  display: none !important;
 }
 
 /* === MOBILE STYLING === */
@@ -242,10 +246,6 @@ main {
   }
 }
 
-.icon {
-  display: none !important;
-}
-
 /* Mobile: tampilkan */
 @media screen and (max-width: 768px) {
   .icon {
@@ -282,6 +282,7 @@ main {
     max-width: 100%;
     height: auto;
 }
+
 
 
 
