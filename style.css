@@ -29,7 +29,6 @@ main {
 /* --- Header --- */
 .header-section {
     background: #155FE8;
-    padding-top: 30px;
     padding-bottom: 24px;
     position: relative;
     text-align: center;
@@ -260,6 +259,7 @@ main {
     max-width: 100%;
     height: auto;
 }
+
 
 
 
