@@ -199,7 +199,7 @@ main {
     font-size: 28px;
     cursor: pointer;
     color: #fff;
-    z-index: 2000;
+    z-index: 5000;
   }
 
   /* Sembunyikan semua menu by default */
@@ -259,6 +259,7 @@ main {
     max-width: 100%;
     height: auto;
 }
+
 
 
 
