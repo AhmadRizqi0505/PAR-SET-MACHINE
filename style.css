@@ -188,7 +188,10 @@ main {
     background: #155FE8;
   }
 
-  /* Tombol hamburger */
+  .topnav a.icon {
+    display: block; /* HAMBURGER MUNCUL */
+  }
+
   .icon {
     position: absolute;
     right: 16px;
@@ -201,14 +204,14 @@ main {
 
   /* Sembunyikan semua menu by default */
   .topnav a:not(.icon),
-.dropdown {
-  display: none;
-  width: 100%;
-  text-align: left;
-}
-    
+  .dropdown {
+    display: none;
+    width: 100%;
+    text-align: left;
+  }
+
   /* Saat hamburger diklik */
-   .topnav.responsive a,
+  .topnav.responsive a,
   .topnav.responsive .dropdown {
     display: block;
   }
@@ -249,7 +252,6 @@ main {
   }
 }
 
-
 /* --- Gambar --- */
 .plant-image {
     border-radius: 8px;
@@ -257,5 +259,6 @@ main {
     max-width: 100%;
     height: auto;
 }
+
 
 
