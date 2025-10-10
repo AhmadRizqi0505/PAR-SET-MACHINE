@@ -190,7 +190,6 @@ main {
 
   /* Tombol hamburger */
   .icon {
-    display: block;
     position: absolute;
     right: 16px;
     top: 12px;
@@ -258,4 +257,5 @@ main {
     max-width: 100%;
     height: auto;
 }
+
 
