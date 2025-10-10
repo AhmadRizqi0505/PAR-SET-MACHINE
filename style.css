@@ -99,9 +99,7 @@ main {
   z-index: 20;
   border-radius: 4px;
 }
-.icon {
-    display: none;
-}
+
 @media screen and (min-width: 769px) {
   .dropdown:hover .dropdown-content {
     display: grid;
@@ -213,7 +211,7 @@ main {
   /* Saat hamburger diklik */
    .topnav.responsive a,
   .topnav.responsive .dropdown {
-    display: block !important;
+    display: block;
   }
 
   /* Dropdown & Submenu di mobile */
@@ -260,3 +258,4 @@ main {
     max-width: 100%;
     height: auto;
 }
+
