@@ -29,6 +29,7 @@ main {
 /* --- Header --- */
 .header-section {
     background: #155FE8;
+    padding-top: 30px;
     padding-bottom: 24px;
     position: relative;
     text-align: center;
@@ -193,13 +194,13 @@ main {
   }
 
   .icon {
-    position: absolute;
+    position: fixed;
     right: 16px;
     top: 12px;
     font-size: 28px;
     cursor: pointer;
     color: #fff;
-    z-index: 100;
+    z-index: 2000;
   }
 
   /* Sembunyikan semua menu by default */
@@ -259,6 +260,7 @@ main {
     max-width: 100%;
     height: auto;
 }
+
 
 
 
