@@ -195,12 +195,16 @@ main {
   .icon {
     position: fixed;
     right: 16px;
-    top: 12px;
+    top: 8px;
     font-size: 28px;
     cursor: pointer;
     color: #fff;
-    z-index: 5000;
+    z-index: 3000;
   }
+
+    .header-section {
+        padding-top: 50px;
+    }
 
   /* Sembunyikan semua menu by default */
   .topnav a:not(.icon),
@@ -259,6 +263,7 @@ main {
     max-width: 100%;
     height: auto;
 }
+
 
 
 
