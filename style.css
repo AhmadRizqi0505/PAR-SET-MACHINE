@@ -1,3 +1,56 @@
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    overflow-x: hidden;
+}
+
+main {
+    flex: 1; 
+}
+
+.main-footer {
+    background: #155FE8;
+    color: #fff;
+    text-align: center;
+    padding: 16px 0;
+    width: 100%;
+    font-size: 15px;
+    letter-spacing: 0.5px;
+    margin-top: auto;
+    z-index: 10;
+    font-weight: 500;
+}
+
+/* --- Header --- */
+.header-section {
+    background: #155FE8;
+    padding-bottom: 24px;
+    position: relative;
+    text-align: center;
+    z-index: 1;
+}
+
+.header-section h1,
+.header-section p {
+    color: #fff;
+    margin: 0;
+}
+
+/* --- Logo --- */
+.logo {
+    position: absolute;
+    top: 40px;
+    left: 20px;
+    width: 150px;
+    height: auto;
+    z-index: 10;
+}
+
 /* --- Topnav --- */
 .topnav {
   background-color: #155FE8;
@@ -24,11 +77,9 @@
   border-bottom: 1px solid #fff;
 }
 
-/* === HAMBURGER ICON === */
-.icon {
-  display: none; /* hanya muncul di mobile */
+.topnav a.icon {
+    display: none;
 }
-
 /* === DROPDOWN DESKTOP === */
 .dropdown {
   position: relative;
@@ -48,12 +99,18 @@
   z-index: 20;
   border-radius: 4px;
 }
-
+.icon {
+    display: none;
+}
 @media screen and (min-width: 769px) {
   .dropdown:hover .dropdown-content {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 6px;
+  }
+
+  .dropdown:hover .dropdown-content {
+    display: grid; /* aktifkan grid */
   }
 }
 
@@ -78,9 +135,10 @@
 
 .dropdown-sub > a {
   position: relative;
-  padding-right: 14px;
+  padding-right: 14px; /* ruang untuk panah */
 }
 
+/* tambahkan ikon panah ke kanan */
 .dropdown-sub > a::after {
   content: "▶";
   position: absolute;
@@ -91,11 +149,12 @@
   color: #1976d2;
 }
 
+/* posisi submenu */
 .dropdown-submenu {
   display: none;
   position: absolute;
   top: 0;
-  left: 100%;
+  left: 100%; /* muncul ke samping kanan */
   background-color: #fff;
   border-left: 3px solid #1976d2;
   min-width: 200px;
@@ -114,15 +173,24 @@
   background-color: #e3f2fd;
 }
 
+/* tampil saat hover di desktop */
 @media screen and (min-width: 769px) {
   .dropdown-sub:hover .dropdown-submenu {
     display: block;
   }
 }
 
+
 /* === MOBILE STYLING === */
 @media screen and (max-width: 768px) {
-  /* Tampilkan hamburger */
+  .topnav.responsive {
+    display: flex !important;
+    flex-direction: column;
+    align-items: flex-start;
+    background: #155FE8;
+  }
+
+  /* Tombol hamburger */
   .icon {
     display: block;
     position: absolute;
@@ -134,31 +202,21 @@
     z-index: 100;
   }
 
-  /* Sembunyikan menu default */
+  /* Sembunyikan semua menu by default */
   .topnav a:not(.icon),
-  .dropdown {
-    display: none;
-    width: 100%;
-    text-align: left;
-  }
-
-  /* Saat toggle aktif */
-  .topnav.responsive {
-    flex-direction: column;
-    align-items: flex-start;
-    background: #155FE8;
-  }
-
-  .topnav.responsive a,
+.dropdown {
+  display: none;
+  width: 100%;
+  text-align: left;
+}
+    
+  /* Saat hamburger diklik */
+   .topnav.responsive a,
   .topnav.responsive .dropdown {
     display: block !important;
-    width: 100%;
-    border-bottom: 1px solid #fff;
-    background: #155FE8;
-    text-align: left;
   }
 
-  /* Dropdown & Submenu mobile */
+  /* Dropdown & Submenu di mobile */
   .dropdown-content,
   .dropdown-submenu {
     position: static;
@@ -177,6 +235,7 @@
     display: block;
   }
 
+  /* Panah submenu */
   .dropdown-sub > a::after {
     content: "▼";
     position: absolute;
