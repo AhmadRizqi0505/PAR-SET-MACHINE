@@ -246,7 +246,7 @@ main {
     right: 16px;
     top: 50%;
     transform: translateY(-50%);
-    font-size: 11px;
+    font-size: 13px;
     color: #1976d2;
     transition: transform 0.3s ease;
   }
@@ -263,6 +263,7 @@ main {
     max-width: 100%;
     height: auto;
 }
+
 
 
 
