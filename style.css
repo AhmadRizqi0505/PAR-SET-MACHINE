@@ -140,7 +140,7 @@ main {
 .dropdown-sub > a::after {
   content: "▶";
   position: absolute;
-  right: 8px;
+  right: 12px;
   top: 50%;
   transform: translateY(-50%);
   font-size: 11px;
@@ -263,6 +263,7 @@ main {
     max-width: 100%;
     height: auto;
 }
+
 
 
 
