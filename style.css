@@ -93,7 +93,7 @@ main {
   background-color: #fff;
   min-width: 200px;
   padding: 10px;
-  font-size: 12px;
+  font-size: 14px;
   box-shadow: 0 4px 8px rgba(0,0,0,0.15);
   border-top: 3px solid #1976d2;
   z-index: 20;
@@ -263,6 +263,7 @@ main {
     max-width: 100%;
     height: auto;
 }
+
 
 
 
