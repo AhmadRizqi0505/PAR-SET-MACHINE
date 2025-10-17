@@ -33,6 +33,7 @@ main {
     position: relative;
     text-align: center;
     z-index: 1;
+    box-shadow: 4px 4px 8px grey;
 }
 
 .header-section h1,
@@ -263,6 +264,7 @@ main {
     max-width: 100%;
     height: auto;
 }
+
 
 
 
