@@ -77,6 +77,7 @@ main {
 .topnav a:hover {
   background-color: red;
   border-bottom: 1px solid #fff;
+  border-radius: 4px;
 }
 
 .topnav a.icon {
@@ -265,6 +266,7 @@ main {
     max-width: 100%;
     height: auto;
 }
+
 
 
 
