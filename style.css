@@ -75,7 +75,7 @@ main {
 }
 
 .topnav a:hover {
-  background-color: #155FE8;
+  background-color: red;
   border-bottom: 1px solid #fff;
 }
 
@@ -265,6 +265,7 @@ main {
     max-width: 100%;
     height: auto;
 }
+
 
 
 
