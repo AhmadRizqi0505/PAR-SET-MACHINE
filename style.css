@@ -88,10 +88,9 @@ main {
 
 .button-logout {
   background-color: #155FE8;
-  display: flex;
-  justify-content: left;
-  position: relative;
-  flex-wrap: wrap;
+  display: none;
+  justify-content: rigth;
+  position: absolute;
   z-index: 10;
   gap: 10px;
 }
@@ -278,6 +277,7 @@ main {
     max-width: 100%;
     height: auto;
 }
+
 
 
 
