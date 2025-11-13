@@ -85,6 +85,16 @@ main {
 .topnav a.icon {
     display: none;
 }
+
+.button-logout {
+  background-color: #155FE8;
+  display: flex;
+  justify-content: left;
+  position: relative;
+  flex-wrap: wrap;
+  z-index: 10;
+  gap: 10px;
+}
 /* === DROPDOWN DESKTOP === */
 .dropdown {
   position: relative;
@@ -268,6 +278,7 @@ main {
     max-width: 100%;
     height: auto;
 }
+
 
 
 
