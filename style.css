@@ -76,16 +76,6 @@ main {
   border-bottom: 1px solid transparent;
 }
 
-.topnav a:hover {
-  background-color: black;
-  border-bottom: 1px solid #fff;
-  border-radius: 4px;
-}
-
-.topnav a.icon {
-    display: none;
-}
-
 .topnav button {
   color: #fff;
   text-align: left;
@@ -96,6 +86,15 @@ main {
   border-bottom: 1px solid transparent;
 }
 
+.topnav a:hover {
+  background-color: black;
+  border-bottom: 1px solid #fff;
+  border-radius: 4px;
+}
+
+.topnav a.icon {
+    display: none;
+}
 
 
 /* === DROPDOWN DESKTOP === */
@@ -281,6 +280,7 @@ main {
     max-width: 100%;
     height: auto;
 }
+
 
 
 
