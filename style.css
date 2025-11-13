@@ -86,14 +86,7 @@ main {
     display: none;
 }
 
-.button-logout {
-  background-color: #155FE8;
-  display: transparent;
-  justify-content: rigth;
-  position: relative;
-  z-index: 10;
-  gap: 10px;
-}
+
 /* === DROPDOWN DESKTOP === */
 .dropdown {
   position: relative;
@@ -277,6 +270,7 @@ main {
     max-width: 100%;
     height: auto;
 }
+
 
 
 
